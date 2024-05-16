@@ -17,41 +17,41 @@
          
             <h3 class="principal__subtitulo">Dados pessoais</h3>
             <div class="formulario__campo">
-                <label class="campo__etiqueta" for="nome">Nome Completo</label>
+                <label class="campo__etiqueta" for="nome">Nome Completo <span class="required">*</span></label>
                 <input name="nome" id="nome" class="campo__escrita" required />
             </div>
             <div class="formulario__dupla">
                 <div class="formulario__campo">
-                    <label class="campo__etiqueta" for="nascimento">Nascimento</label>
+                    <label class="campo__etiqueta" for="nascimento">Nascimento <span class="required">*</span></label>
                     <input name="nascimento" id="nascimento" type="date" class="campo__escrita" required />
                     <div id="idadeError" class="error-message" style="display: none;">Você deve ser maior de 18 anos para se cadastrar.</div>
 
                 </div>
                 
                 <div class="formulario__campo">
-                    <label class="campo__etiqueta" for="telefone">Contato</label>
+                    <label class="campo__etiqueta" for="telefone">Contato <span class="required">*</span></label>
                     <input name="telefone" id="telefone" type="tel" placeholder="(XX) XXXXX-XXXX" class="campo__escrita" required />
                 </div>
             </div>
             <div class="formulario__campo">
-                <label class="campo__etiqueta" for="email">E-mail</label>
+                <label class="campo__etiqueta" for="email">E-mail <span class="required">*</span></label>
                 <input name="email" id="email" type="email" class="campo__escrita" required />
                 <div id="emailError" class="error-message" style="display: none;">Por favor, insira um e-mail válido.</div>
             </div>
           
-            <h3 class="principal__subtitulo">Endereço</h3>
+            <h3 class="principal__subtitulo">Endereço </h3>
             <div class="formulario__campo">
-                <label class="campo__etiqueta" for="cep">CEP</label>
+                <label class="campo__etiqueta" for="cep">CEP <span class="required">*</span></label>
                 <input name="cep" id="cep" class="campo__escrita" required />
                 <div id="erro"></div>
             </div>
             <div class="formulario__campo">
-                <label class="campo__etiqueta" for="endereco">Endereço</label>
+                <label class="campo__etiqueta" for="endereco">Endereço<span class="required">*</span></label>
                 <input name="endereco" id="endereco" class="campo__escrita" required />
             </div>
             <div class="formulario__dupla">
                 <div class="formulario__campo">
-                    <label class="campo__etiqueta" for="numero">Número</label>
+                    <label class="campo__etiqueta" for="numero">Número <span class="required">*</span></label>
                     <input name="numero" id="numero" class="campo__escrita" required />
                 </div>
                 <div class="formulario__campo">
@@ -60,16 +60,16 @@
                 </div>
             </div>
             <div class="formulario__campo">
-                <label class="campo__etiqueta" for="bairro">Bairro</label>
+                <label class="campo__etiqueta" for="bairro">Bairro <span class="required">*</span></label>
                 <input name="bairro" id="bairro" class="campo__escrita" required />
             </div>
             <div class="formulario__dupla">
                 <div class="formulario__campo">
-                    <label class="campo__etiqueta" for="cidade">Cidade</label>
+                    <label class="campo__etiqueta" for="cidade">Cidade <span class="required">*</span></label>
                     <input name="cidade" id="cidade" class="campo__escrita" required />
                 </div>
                 <div class="formulario__campo">
-                    <label class="campo__etiqueta" for="estado">UF</label>
+                    <label class="campo__etiqueta" for="estado">UF <span class="required">*</span></label>
                     <select id="estado" name="estado" class="campo__escrita">
                         <option value="AC">Acre</option>
                         <option value="AL">Alagoas</option>
