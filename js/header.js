@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function() {
     // Função para carregar o conteúdo do header.html e inseri-lo no elemento #header-container
     function loadHeader() {
@@ -35,7 +36,6 @@ document.addEventListener("DOMContentLoaded", function() {
         xhttp.open("GET", "../pages/produtos.html", true);
         xhttp.send();
     }
-   
 
     // Função para carregar o conteúdo do footer.html e inseri-lo no elemento #footer-container
     function loadFooter() {
@@ -49,22 +49,58 @@ document.addEventListener("DOMContentLoaded", function() {
         xhttp.send();
     }
 
-    // Configura os eventos do cabeçalho após carregar o conteúdo
+    // Chamar as funções para carregar o header, o carousel, os produtos e o footer assim que o documento estiver pronto
+    loadHeader();
+    loadCarousel();
+    loadProdutos();
+    loadFooter();
 
+    // Função para filtrar os produtos
+    function filterProducts(category) {
+        const allProducts = document.querySelectorAll(".produtos");
+
+        allProducts.forEach(productSection => {
+            if (category === "all" || productSection.dataset.category === category) {
+                productSection.style.display = "block";
+            } else {
+                productSection.style.display = "none";
+            }
+        });
+    }
+
+    // Configura eventos do cabeçalho após carregar o conteúdo
     function setupHeaderEvents() {
+        // Adiciona evento de clique nos links do menu de categorias
+        const categoryLinks = document.querySelectorAll(".category-link");
+
+        categoryLinks.forEach(link => {
+            link.addEventListener("click", (event) => {
+                event.preventDefault();
+                const category = event.target.dataset.category;
+                filterProducts(category);
+
+                // Fecha o menu após selecionar a categoria no mobile
+                let menu = document.querySelector(".menu");
+                menu.classList.remove("menu-selected");
+            });
+        });
+
+        // Filtra os produtos para mostrar todos inicialmente
+        filterProducts("all");
+
+        // Configura eventos para o menu móvel
         let iconMobile = document.querySelector(".icon-mobile span");
         let buttonClose = document.querySelector(".menu span.close");
 
         if (iconMobile) {
             iconMobile.addEventListener("click", () => {
                 document.querySelector(".menu").classList.add("menu-selected");
-                document.querySelector(".cad-log").style.display = "flex";
                 buttonClose.style.display = "flex";
             });
         }
 
         if (buttonClose) {
-            buttonClose.addEventListener("click", () => {
+            buttonClose.addEventListener("click", (event) => {
                 let menu = document.querySelector(".menu");
 
                 // Adiciona a animação de saída
@@ -74,18 +110,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 setTimeout(() => {
                     menu.style.animation = ""; // Limpa a animação
                     menu.classList.remove("menu-selected");
-                }, 200); // Tempo da animação (0.5s) em milissegundos
+                }, 200); // Tempo da animação (0.2s) em milissegundos
 
                 // Impede a propagação do evento para evitar comportamento inesperado
                 event.stopPropagation();
             });
         }
     }
-
-    // Chamar as funções para carregar o header, o carousel, os produtos e o footer assim que o documento estiver pronto
-    loadHeader();
-    loadCarousel();
-    loadProdutos();
-    loadFooter();
-   
 });
+
