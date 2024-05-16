@@ -1,21 +1,24 @@
-# 1º Projeto Prático - DevWeb
+# 2º Projeto Prático - DevWeb
 
-## Construindo um Site Responsivo com HTML e CSS
+## Interatividade no Site Responsivo
+
 
 ### Desafio
-Desenvolva um site responsivo completo para uma empresa do ramo de cosméticos, com foco na criação de um layout flexível que se adapte a dispositivos móveis e desktop. Ao finalizar este projeto, você terá praticado HTML e CSS, aprendendo a estruturar páginas da web, criar um cabeçalho, rodapé e utilizar variáveis CSS para facilitar a manutenção do design.
+Aprimore o site responsivo criado no projeto "Construindo um Site Responsivo com HTML e CSS" adicionando funcionalidades interativas e dinâmicas com JavaScript. Isso pode incluir recursos como um menu suspenso, carrossel de imagens, exibição de informações ao passar o mouse e outros elementos interativos.
+
 
 ### Etapas
-1. **Estrutura do Site**: Crie uma estrutura de arquivos e defina a estrutura HTML básica.
-2. **Cabeçalho e Rodapé**: Desenvolva um cabeçalho e rodapé atraentes, aplicando estilos CSS.
-3. **Variáveis CSS**: Utilize variáveis CSS para melhorar a manutenção do design.
-4. **Responsividade**: Garanta que o site seja responsivo e se adapte a diferentes tamanhos de tela.
-5. **Publicação**: Publique o projeto em um servidor ou plataforma de hospedagem.
+1. **Identificação de Elementos**: Identifique os elementos do site onde a interatividade será aplicada.
+2. **Manipulação do DOM**: Utilize JavaScript para manipular o DOM e adicionar comportamentos interativos.
+3. **Eventos de Usuário**: Implemente eventos de usuário, como cliques, mouseover e mouseout, para acionar a interatividade.
+4. **Validação**: Se for relevante, integre validação de formulários para garantir que os dados do usuário sejam inseridos corretamente.
+5. **Teste e Aprimoramento**: Teste a interatividade em diferentes dispositivos e faça ajustes para garantir que funcione de maneira consistente.
+
 
 
 # Visualizar o projeto.
  
-Acesse o [link](https://chic-beauty.vercel.app/index.html) para visualizar o protifolio.
+Acesse o [link](https://chic-beauty-02.vercel.app/index.html) para visualizar o protifolio.
 
 # Autor
-Eliane
+Eliane Henriqueta
