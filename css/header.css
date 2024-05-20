@@ -24,12 +24,12 @@ span {
 .logo img {
     width: 45px;
 }
-.desktop-only {
-    display: none; /* Inicialmente, oculta o título */
-    font-weight: 400;
-    /* olor: var(--preto);   */
 
+.desktop-only {
+    display: none;
+    font-weight: 400;
 }
+
 .search-mobile {
     display: none;
 }
@@ -71,6 +71,22 @@ span {
     align-items: center;
 }
 
+.qty {
+    position: absolute;
+    background-color: var(--primary-color);
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 12px;
+}
+a:hover {
+    color: var(--secondary-color);
+}
+
 .login-option span,
 .carrinho-option span {
     cursor: pointer;
@@ -78,17 +94,16 @@ span {
     font-size: 26px;
 }
 
-/* Adicionei o código abaixo para tornar o link de entrada visível apenas quando o mouse estiver sobre o elemento .login-option */
 .top-header .login-option a {
     text-decoration: none;
     color: var(--preto);
     font-size: 15px;
-    opacity: 0; /* Inicialmente, o link estará invisível */
-    transition: opacity 0.3s ease; /* Adiciona uma transição suave */
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .top-header .login-option:hover a {
-    opacity: 1; /* Quando o mouse passar sobre .login-option, o link ficará visível */
+    opacity: 1;
 }
 
 .menu {
@@ -135,16 +150,16 @@ span {
 }
 
 .carousel-container {
-    margin: 20px 50px 0; /* Espaço nas laterais e margem superior */
+    margin: 20px 50px 0;
 }
 
 .carousel img {
     max-width: 100%;
-    max-height: 550px; 
-  
+    max-height: 550px;
     align-items: center;
 }
 
+  
 @media screen and (max-width: 980px) {
     .destaque {
         width: 48%;
@@ -198,6 +213,10 @@ span {
     }
     .menu span {
         display: flex;
+    }
+    .qty {
+        top: 15px; /* Ajuste para mobile */
+        right: 110px; /* Ajuste para mobile */
     }
     .search {
         display: none;
@@ -256,6 +275,10 @@ span {
     .destaque {
         width: 98%;
     }
+    .qty {
+        top: 15px; /* Ajuste para mobile */
+        right: 40px; /* Ajuste para mobile */
+    }
 }
 
 @media screen and (max-width: 440px) {
@@ -271,23 +294,28 @@ span {
         height: 10%;
     }
 }
+
 @media screen and (min-width: 768px) {
     .desktop-only {
-        display: block; /* Mostra o título apenas em dispositivos com largura de tela maior ou igual a 768px (desktop) */
+        display: block;
+    }
+
+    .qty {
+        top: 15px;
+        right: 70px; 
     }
 }
 
 .chic {
-    color: var(--preto); /* Cor para "Chic" */
+    color: var(--preto);
     font-weight: 400;
     font-family: "Galada", cursive;
     font-style: normal;
     font-size: 35px;
-
 }
 
 .beauty {
-    color: var(--primary-color); /* Cor para "Beauty" */
+    color: var(--primary-color);
     font-weight: 400;
     font-family: "Galada", cursive;
     font-style: normal;

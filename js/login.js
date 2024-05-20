@@ -1,4 +1,4 @@
-/* document.addEventListener('DOMContentLoaded', (event) => {
+document.addEventListener('DOMContentLoaded', (event) => {
     const emailInput = document.querySelector('#email');
     const passwordInput = document.querySelector('#password');
     const emailError = document.querySelector('#emailError');
@@ -74,4 +74,4 @@
     // Adiciona um event listener para o clique no ícone de mostrar senha
     document.querySelector('#showPassword').addEventListener('click', togglePasswordVisibility);
 });
- */
+ 
