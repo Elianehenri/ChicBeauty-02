@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const formData = new FormData(form);
 
         // Enviar dados para o backend
-        fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/users/register`, {
+        fetch(`${window.NEXT_PUBLIC_API_URL}/api/users/register`, {
             method: 'POST',
             body: formData
         })
@@ -111,4 +111,3 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-
