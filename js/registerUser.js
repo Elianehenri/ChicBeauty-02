@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+/* document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('formulario');
     const nascimentoInput = document.getElementById('nascimento');
     const idadeError = document.getElementById('idadeError');
@@ -71,3 +71,44 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+ */
+
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('formulario');
+    const nascimentoInput = document.getElementById('nascimento');
+    const idadeError = document.getElementById('idadeError');
+
+    // Adicionar um evento de envio ao formulário
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Evita o envio padrão do formulário
+
+        const formData = new FormData(form);
+
+        // Enviar dados para o backend
+        fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/users/register`, {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Erro ao cadastrar o usuário. Código HTTP: ' + response.status);
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Verificar a resposta do servidor
+            if (data.success) {
+                // Redirecionar para a página de login
+                window.location.href = 'login.html';
+            } else {
+                // Exibir mensagem de erro do servidor
+                throw new Error('Erro ao cadastrar o usuário: ' + data.message);
+            }
+        })
+        .catch(error => {
+            console.error('Erro:', error.message);
+            alert('Erro ao cadastrar o usuário. Por favor, tente novamente.');
+        });
+    });
+});
+
