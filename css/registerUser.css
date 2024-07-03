@@ -6,14 +6,6 @@
     padding: 20px; /* Adiciona espaçamento interno */
     border-radius: 15px; /* Adiciona cantos arredondados */
     box-shadow: 0 10px 25px -10px rgba(0, 0, 0, 0.75); /* Adiciona sombra */
-   
-}
-
-.principal__titulo {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 26px;
-    color: var(--preto);
 }
 
 .principal__subtitulo {
@@ -21,12 +13,13 @@
     line-height: 26px;
     color: var(--preto);
     margin: 48px 0 32px 0;
+    text-align: center;
 }
 
 .campo__etiqueta {
     display: block;
     font-weight: 700;
-     line-height: 24px; 
+    line-height: 24px;
     color: var(--cinza);
     margin-left: 1em;
 }
@@ -39,20 +32,17 @@
     margin-bottom: 1em; /* Adiciona espaço abaixo de cada campo */
     background-color: var(--cinza-input); /* Cor de fundo para os campos de entrada */
 }
+
 .required {
     color: var(--color-erro); /* Cor vermelha para o asterisco */
     margin-left: 0.25em; /* Pequeno espaçamento à esquerda */
     font-weight: bold; /* Negrito para destaque */
 }
+
 .formulario__campo {
     margin: 9.6px 48px 9.6px 0;
     display: flex;
     flex-direction: column; /* Altera para coluna em dispositivos móveis */
-}
-
-.formulario__dupla {
-    display: flex;
-    gap: 20px; /* Espaçamento entre os campos duplos */
 }
 
 /* Contêiner para o botão e o link "Início" */
@@ -85,19 +75,6 @@
     background-color: var(--primary-color); /* Altera a cor de fundo ao passar o mouse */
 }
 
-
-.formulario__erro {
-    display: flex;
-    margin-top: .5em;
-    align-items: center;
-}
-
-.erro__texto {
-    font-size: 12px;
-    line-height: 18px;
-    color: var(--color-erro);
-}
-
 .error-message {
     color: var(--color-erro); /* Cor vermelha para mensagens de erro */
     font-size: 12px;
@@ -110,11 +87,6 @@
         width: 90vw;
         margin: 40px auto 48px auto;
         padding: 15px;
-    }
-
-    .principal__titulo {
-        font-size: 22px;
-        text-align: center;
     }
 
     .principal__subtitulo {
@@ -136,22 +108,8 @@
         margin: 8px 0;
     }
 
-    .formulario__dupla {
-        flex-direction: column;
-        gap: 10px;
-    }
-
     .formulario__botao {
         padding: 12px 48px;
         font-size: 18px;
     }
-
-    .inicio__link {
-        font-size: 14px;
-        text-align: center;
-        width: 100%;
-        display: block;
-    }
 }
-
-
